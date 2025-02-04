@@ -34,16 +34,18 @@
 #     print(i)
 #     i += 0.5
 # olco can use for i in np.arange(1.5, 5.5, 0.5)
+#disitionn
+
 
 #5
 # my_list=[]
-# for i in range(1,21,1):
+# for i in range(1,21):
 #     my_list.append(i)
 # print(my_list)
 # print("=================================")
 
 # for index,item in enumerate(my_list):
-#     if item%2==0:
+#     if index%2==0:
 #         print(index,item)
 
 #6
@@ -136,7 +138,7 @@ for i in sandwich_orders:
                 sandwich_orders.remove(i)
 print(sandwich_orders)
 
-#10.2
+# #10.2
 finished_sandwiches=[]
 for index in sandwich_orders:
 
