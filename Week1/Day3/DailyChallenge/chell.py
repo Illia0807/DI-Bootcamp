@@ -1,12 +1,14 @@
 #ch_1
-# user_word=input("enter your word->")
-# print(type(user_word))
-# user_dict={}
-# for key, value in enumerate(user_word):
-#         if value not in user_dict:
-#                 user_dict[value]=[]
-#         user_dict[value].append(key)
-# print(user_dict)    
+user_word=input("enter your word->")
+print(type(user_word))
+user_dict={}
+for key, value in enumerate(user_word):
+        if value not in user_dict:
+                user_dict[value]=[]
+        else:
+               user_dict[value].append(key) 
+        
+print(user_dict)    
 
 #ch2   
 # items_purchase = {
