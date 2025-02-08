@@ -1,0 +1,40 @@
+Welcome to TIC TAC TOE!
+
+TIC TAC TOE
+*****************
+*     |   |     *
+*  ---|---|---  *       
+*     |   |     *
+*  ---|---|---  *
+*     |   |     *
+*****************
+
+Player X's turn...   
+Enter row:1
+Enter colum:2
+
+TIC TAC TOE
+*****************
+*     | X |     *
+*  ---|---|---  *       
+*     |   |     *
+*  ---|---|---  *
+*     |   |     *
+*****************
+
+Player O's turn...
+Enter row:1
+Enter colum:1
+
+TIC TAC TOE
+*****************
+*   O | X |     *
+*  ---|---|---  *       
+*     |   |     *
+*  ---|---|---  *
+*     |   |     *
+*****************
+
+Player O's turn...
+Enter row:1
+Enter colum:1
