@@ -1,0 +1,58 @@
+-- SELECT * FROM language;
+-- SELECT f.title, f.description, l.name AS language_name
+-- FROM film f
+-- JOIN language l ON f.language_id = l.language_id;
+
+-- SELECT f.title, f.description, l.name AS language_name
+-- FROM language l
+-- LEFT JOIN film f ON l.language_id = f.language_id;
+
+-- CREATE TABLE new_film (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL
+-- );
+-- INSERT INTO new_film (name) VALUES 
+-- ('Inception'),
+-- ('The Matrix'),
+-- ('Interstellar'),
+-- ('The Dark Knight'),
+-- ('Pulp Fiction');
+
+-- SELECT * FROM new_film;
+
+-- CREATE TABLE customer_review (
+--     review_id SERIAL PRIMARY KEY,  -- auto-increment primary key
+--     film_id INTEGER NOT NULL,  -- reference to the film being reviewed
+--     language_id INTEGER NOT NULL,  -- reference to the language of the review
+--     title VARCHAR(255) NOT NULL,  -- title of the review
+--     score INTEGER CHECK (score BETWEEN 1 AND 10),  -- rating score between 1 and 10
+--     review_text TEXT,  -- text of the review, no length limit
+--     last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  -- when the review was last updated
+--     CONSTRAINT fk_film FOREIGN KEY (film_id) REFERENCES new_film(id) ON DELETE CASCADE,  -- foreign key to the new_film table, with DELETE CASCADE
+--     CONSTRAINT fk_language FOREIGN KEY (language_id) REFERENCES language(language_id)  -- foreign key to the language table
+-- );
+
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text)
+-- VALUES
+-- ((SELECT id FROM new_film WHERE name = 'Inception'), 1, 'Amazing Concept', 9, 'Inception is a thrilling and mind-bending movie with amazing visuals and a great story.'),
+-- ((SELECT id FROM new_film WHERE name = 'The Matrix'), 1, 'A Groundbreaking Film', 10, 'The Matrix revolutionized cinema with its groundbreaking special effects and thought-provoking story.'),
+-- ((SELECT id FROM new_film WHERE name = 'Interstellar'), 1, 'A Visual Masterpiece', 8, 'Interstellar delivers stunning visuals and a deep exploration of time and space, though the story can be complex.');
+
+-- SELECT * FROM customer_review;
+
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text)
+-- VALUES 
+-- ((SELECT id FROM new_film WHERE name = 'Inception'), 
+--  (SELECT language_id FROM language WHERE name = 'English'), 
+--  'A Brilliant Mind-Bender', 
+--  9, 
+--  'Inception is a visually stunning and thought-provoking movie, perfect for fans of complex plots and action.');
+
+-- INSERT INTO customer_review (film_id, language_id, title, score, review_text)
+-- VALUES 
+-- ((SELECT id FROM new_film WHERE name = 'The Matrix'), 
+--  (SELECT language_id FROM language WHERE name = 'French'), 
+--  'Un film révolutionnaire', 
+--  10, 
+--  'The Matrix a changé la façon dont nous voyons la science-fiction, avec des effets spéciaux inédits et une histoire captivante.');
+-- SELECT * FROM customer_review;

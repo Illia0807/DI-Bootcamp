@@ -1,0 +1,74 @@
+--ВТОРОЕ ЗАДАНИЕ!!!!!!!!!!!!!!!!!!!!!!!!
+-- ALTER TABLE new_film
+-- ADD COLUMN language_id INT REFERENCES language(language_id);
+
+-- UPDATE new_film
+-- SET language_id = (SELECT language_id FROM language WHERE name = 'French')
+-- WHERE name = 'Inception';
+
+-- UPDATE new_film
+-- SET language_id = (SELECT language_id FROM language WHERE name = 'Spanish')
+-- WHERE name = 'The Matrix';
+
+-- SELECT name, language_id FROM new_film WHERE name IN ('Inception', 'The Matrix');
+
+2.Foreign keys in the customer table ensure data integrity and prevent inserting records with invalid references. When inserting data, you need to make sure that the rows referenced by the foreign keys (such as in the store and address tables) already exist. If they don't, the insert operation will fail.
+
+3.easy step
+
+--4.
+-- SELECT COUNT(*)
+-- FROM rental
+-- WHERE return_date IS NULL;
+
+--5.
+-- SELECT f.title, f.rental_rate, r.rental_id
+-- FROM rental r
+-- JOIN inventory i ON r.inventory_id = i.inventory_id
+-- JOIN film f ON i.film_id = f.film_id
+-- WHERE r.return_date IS NULL
+-- ORDER BY f.rental_rate DESC
+-- LIMIT 30;
+
+--6.
+-- SELECT f.title
+-- FROM film f
+-- JOIN film_actor fa ON f.film_id = fa.film_id
+-- JOIN actor a ON fa.actor_id = a.actor_id
+-- WHERE a.first_name = 'Penelope' AND a.last_name = 'Monroe'
+-- AND f.description LIKE '%sumo wrestler%';
+
+-- SELECT f.title
+-- FROM film f
+-- JOIN film_category fc ON f.film_id = fc.film_id
+-- JOIN category c ON fc.category_id = c.category_id
+-- WHERE f.length < 60 AND f.rating = 'R'
+-- AND c.name = 'Documentary';
+
+-- SELECT f.title
+-- FROM rental r
+-- JOIN customer c ON r.customer_id = c.customer_id
+-- JOIN inventory i ON r.inventory_id = i.inventory_id
+-- JOIN film f ON i.film_id = f.film_id
+-- WHERE c.first_name = 'Matthew' AND c.last_name = 'Mahan'
+-- AND r.rental_date BETWEEN '2005-07-28' AND '2005-08-01'
+-- AND r.return_date IS NOT NULL
+-- AND r.amount_paid > 4.00;
+
+-- SELECT f.title
+-- FROM film f
+-- JOIN inventory i ON f.film_id = i.film_id
+-- JOIN rental r ON i.inventory_id = r.inventory_id
+-- JOIN payment p ON r.rental_id = p.rental_id
+-- WHERE p.amount > 4.00
+-- AND r.return_date BETWEEN '2005-07-28' AND '2005-08-01'
+-- AND r.customer_id = (SELECT customer_id FROM customer WHERE first_name = 'Matthew' AND last_name = 'Mahan');
+
+-- SELECT f.title
+-- FROM rental r
+-- JOIN customer c ON r.customer_id = c.customer_id
+-- JOIN inventory i ON r.inventory_id = i.inventory_id
+-- JOIN film f ON i.film_id = f.film_id
+-- WHERE c.first_name = 'Matthew' AND c.last_name = 'Mahan'
+-- AND (f.title LIKE '%boat%' OR f.description LIKE '%boat%')
+-- AND f.rental_rate > (SELECT AVG(rental_rate) FROM film);
