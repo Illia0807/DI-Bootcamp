@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 20% auto; 
+        grid-template-rows: 100vh; 
+        margin: 0;
+      }
+     
+      #sidebar {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        height: 100vh;
+        background-color: darkgrey;
+        padding: 5px;
+      }
+
+      button {
+        grid-column: 1 / 4;
+        background-color: whitesmoke;
+        border: none;
+        border-radius: 8px;
+        color: black;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      #main {
+        display: grid;
+        grid-template-columns: repeat(60, 15px);
+        grid-template-rows: repeat(30, 35px);
+        gap: 2px;
+        padding: 10px;
+
+        background-color: white;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <button id="btn">Clear</button>
+      
+    </div>
+    <div id="main"></div>
+    <script src="animation2.js"></script>
+  </body>
+</html>
