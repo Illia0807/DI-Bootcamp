@@ -1,0 +1,52 @@
+/* стиль для всего header */
+body {
+  background-image: url("./back-ground.png");
+  background-color: blueviolet;
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+
+}
+.header {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 1rem; 
+  background-color: #28a745; 
+  color: white; 
+}
+/* стиль для заголовка */
+.logo {
+  font-family: "SEGA LOGO FONT", sans-serif; 
+  text-transform: uppercase;
+}
+/* стиль для инпута */
+.search-input {
+  width: 50%;
+  margin-left: 1.25rem; 
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 5% 10%;
+}
+.userBox {
+  background-image: url("./card-pattern.png");
+  background-color: aqua;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 5% 10%;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border-radius: 50%;
+  background-color: black;
+}
