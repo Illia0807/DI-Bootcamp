@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Trivia Quiz</h1>
+
+    <div id="quiz-section">
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div id="question-section" style="display: none">
+      <h2 id="question-text"></h2>
+      <form id="answer-form">
+        <input
+          type="text"
+          id="answer"
+          name="answer"
+          placeholder="Your answer"
+          required
+        />
+        <button type="submit">Submit Answer</button>
+      </form>
+      <p id="feedback"></p>
+    </div>
+
+    <div id="score-section" style="display: none">
+      <h2>Your Score</h2>
+      <p id="final-score"></p>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
