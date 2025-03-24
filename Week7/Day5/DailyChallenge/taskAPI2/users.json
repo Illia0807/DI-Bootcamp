@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1742797436029,
+    "name": "John",
+    "lastname": "Doe",
+    "email": "john.doe@example.com",
+    "username": "johndoe",
+    "password": "$2b$10$X5/9920UHX1AKZ7HjGI0PugPa8lqqL.Kcu4kWXN2qDkzLN4zihfNy"
+  },
+  {
+    "id": 1742798429060,
+    "name": "Illia",
+    "lastname": "Andriienko",
+    "email": "illia.andriienko777@gmail.com",
+    "username": "ILAN",
+    "password": "$2b$10$GuJJI6.6L4ea.N6.OBgL9OYtzhLKhj1jCtO4vrLiULpvUzNUlet/e"
+  }
+]
