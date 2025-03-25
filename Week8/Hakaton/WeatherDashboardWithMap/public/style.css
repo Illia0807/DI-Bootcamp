@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #3674B5;
+  --second-color: #578FCA;
+  --accent-color: #D1F8EF;
+  --footer-color: #A1E3F9;
+  --card-color: #DEE5D4;
+  --shadow-color: rgba(232, 227, 227, 0.3);
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+}
+#container {
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  gap: 50px;
+  padding: 1% 10%;
+  background-color: var(--second-color);
+  border-bottom: 5px solid var(--accent-color);
+  align-items: first baseline;
+}
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  color: var(--accent-color);
+}
+button {
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--footer-color);
+  border: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: 5px 5px 10px var(--shadow-color);
+}
+input {
+  height: 30px;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  padding: 3% 2%;
+}
+
+#map {
+  border-radius: 15px;
+  height: 500px;
+  width: 500px;
+  box-shadow: 5px 5px 10px var(--shadow-color);
+}
+#weather-info {
+  width: 250px;
+  padding: 20px;
+  background-color: var(--card-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+#weather-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.temperature {
+  font-size: 30px;
+  font-weight: bold;
+  color:var(--second-color);
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.pressure-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.pressure {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.pressure-value {
+  color: var(--primary-color);
+}
+
+footer {
+  display: flex;
+  align-items: baseline;
+  background-color: var(--footer-color);
+  border-top: 5px solid var(--accent-color);
+  padding-left: 10%;
+  margin-top: auto; 
+}
